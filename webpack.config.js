@@ -38,6 +38,11 @@ module.exports = {
             }
         ]
     },
+    devServer: {
+        static: {
+          directory: path.join(__dirname, '/'),
+        }
+    },
     plugins: [
         new webpack.ProvidePlugin({
             $: "jquery",
@@ -47,5 +52,5 @@ module.exports = {
             analyzerMode: "static", // the report outputs to an HTML file in the dist folder
         })
     ],
-    mode: 'development'
+    mode: 'development',
 };
